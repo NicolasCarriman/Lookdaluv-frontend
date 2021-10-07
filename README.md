@@ -16,12 +16,14 @@
 <li><a href="https://nodejs.org/en/download/" rel="nofollow">NodeJS</a> Incluye paquete 'npm'.</li>
 <li><a href="https://cli.github.com" rel="nofollow">Github CLI</a>Nos permitira subir y traer cambios del repositorio principal.</li>
 </ul>
-
-**Paso 1: Descargar e instalar NodeJS y npm.**
+<br>
+<br>
+<strong>Paso 1: Descargar e instalar NodeJS y npm.</strong>
 
 https://nodejs.org/en/download/. Hagan clic en el boton 'Windows Installer' para descargar el archivo de instalación. El instalador NodeJS incluye el paquete npm el cual utilizaremos para iniciar el servidor de react.
-
-**Paso 2: Checkear que este instalado node y npm.**
+<br>
+<br>
+<strong>Paso 2: Checkear que este instalado node y npm.</strong>
 
 Abrir una consola de comandos (o PowerShell), y escribir lo siguiente:
 
@@ -32,8 +34,8 @@ Con eso el sistema nos dira la version de Node.JS instalada en el sistema, hacem
 
 <pre><code>npm -v
 </code></pre>
-
-**Paso 3: Instalar React.**
+<br>
+<strong>Paso 3: Instalar React.</strong>
 
 Instalaremos React con el siguiente comando en la consola o powershell.
 
@@ -45,11 +47,9 @@ Para comprobar si se instalo React (nos debe aparecer una version).
 <pre><code>npm create-react-app --version
 </code></pre>
 
-<br>
-<br>
 <p>Una vez instaladas las dependencias se puede correr la aplicación.</p>
-
-**Paso 4: Instalar Github CLI.**
+<br>
+<strong>Paso 4: Instalar Github CLI.</strong>
 
 Descargar Github CLI de la siguiente pagina: https://cli.github.com
 
@@ -72,33 +72,39 @@ Lo primero es posicionarnos en la rama principal del proyecto 'main':
   Nota: Se debe seguir la siguiente nomenclatura: issue_xxxx. El numero sera el mismo que el que encontraremos en la tarjeta. (Ej: #24).
 </em>
 
+<br>
+<br>
 <strong>Enviar los cambios para su revisión:</strong>
 
+<br>
+<br>
 Una vez hayan hecho modificaciones en los archivos podran ver los cambios en Visual Studio Code, lo mejor es chequear que este todo en orden antes de proceder a enviar los cambios. Se utilizan los siguientes comandos:
-
+<br>
+<br>
+<em>
+  Para ver los archivos modificados.
+</em>
 <pre><code>git status
 </code></pre>
-<em>
-  Nota: Para ver los archivos modificados.
-</em>
 
+<em>
+  Para añadir el archivo.
+</em>
 <pre><code>git add src/ejemplo.css
 </code></pre>
-<em>
-  Nota: Para añadir el archivo.
-</em>
 
+<em>
+  Para empaquetar todo y que quede listo para enviar.
+</em>
 <pre><code>git commit -m "feat: nuevo diseño de la vista del perfil."
 </code></pre>
-<em>
-  Nota: Para empaquetar todo y que quede listo para enviar.
-</em>
 
+<em>
+  Deberan poner el nombre de la rama en la que trabajan, si es la primera vez que envian cambios creara la rama en GitHub.
+</em>
 <pre><code>git push origin issue_0001
 </code></pre>
-<em>
-  Nota: Deberan poner el nombre de la rama en la que trabajan, si es la primera vez que envian cambios creara la rama en GitHub.
-</em>
+
 
 <h2><a id="user-content-comandos-utiles" class="anchor" aria-hidden="true" href="#comandos-utiles"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Comandos utiles</h2>
 
