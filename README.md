@@ -14,7 +14,7 @@
 <ul>
 <li><a href="https://es.reactjs.org/" rel="nofollow">React</a> (sólo necesario para modo desarrollo o testing).</li>
 <li><a href="https://nodejs.org/en/download/" rel="nofollow">NodeJS</a> Incluye paquete 'npm'.</li>
-<li><a href="https://cli.github.com" rel="nofollow">Github CLI</a>Nos permitira subir y traer cambios del repositorio principal.</li>
+<li><a href="https://cli.github.com" rel="nofollow">Github CLI</a> Nos permitira subir y traer cambios del repositorio principal.</li>
 </ul>
 
 <br>
