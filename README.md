@@ -16,15 +16,17 @@
 <li><a href="https://nodejs.org/en/download/" rel="nofollow">NodeJS</a> Incluye paquete 'npm'.</li>
 <li><a href="https://cli.github.com" rel="nofollow">Github CLI</a>Nos permitira subir y traer cambios del repositorio principal.</li>
 </ul>
-<br>
+
 <br>
 <strong>Paso 1: Descargar e instalar NodeJS y npm.</strong>
-
+<br>
+<br>
 https://nodejs.org/en/download/. Hagan clic en el boton 'Windows Installer' para descargar el archivo de instalación. El instalador NodeJS incluye el paquete npm el cual utilizaremos para iniciar el servidor de react.
 <br>
 <br>
 <strong>Paso 2: Checkear que este instalado node y npm.</strong>
-
+<br>
+<br>
 Abrir una consola de comandos (o PowerShell), y escribir lo siguiente:
 
 <pre><code>node -v
@@ -36,7 +38,8 @@ Con eso el sistema nos dira la version de Node.JS instalada en el sistema, hacem
 </code></pre>
 <br>
 <strong>Paso 3: Instalar React.</strong>
-
+<br>
+<br>
 Instalaremos React con el siguiente comando en la consola o powershell.
 
 <pre><code>npm install -g create-react-app
@@ -50,7 +53,8 @@ Para comprobar si se instalo React (nos debe aparecer una version).
 <p>Una vez instaladas las dependencias se puede correr la aplicación.</p>
 <br>
 <strong>Paso 4: Instalar Github CLI.</strong>
-
+<br>
+<br>
 Descargar Github CLI de la siguiente pagina: https://cli.github.com
 
 
@@ -157,9 +161,10 @@ python manage.py migrate_schemas
 <em>
   Nota: Para sistemas Linux.
 </em>
-
+<br>
+<br>
 <strong>Iniciar el proyecto:</strong>
-
+<br>
 <br>
 <pre><code>npm start
 </code></pre>
