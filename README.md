@@ -98,7 +98,7 @@ Una vez hayan hecho modificaciones en los archivos podran ver los cambios en Vis
 </code></pre>
 
 <em>
-  Para empaquetar todo y que quede listo para enviar.
+  Para empaquetar todo y que quede listo para enviar. Si el issue es una Feature va el prefijo 'feat:' si es una corrección va 'fix:'.
 </em>
 <pre><code>git commit -m "feat: nuevo diseño de la vista del perfil."
 </code></pre>
