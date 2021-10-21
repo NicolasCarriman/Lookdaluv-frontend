@@ -56,7 +56,8 @@ Para comprobar si se instalo React (nos debe aparecer una version).
 <br>
 <br>
 Descargar Github CLI de la siguiente pagina: https://cli.github.com
-
+<br>
+<br>
 <strong>Paso 5: Instalar librerias.</strong>
 <br>
 <br>

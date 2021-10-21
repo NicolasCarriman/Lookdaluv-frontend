@@ -29,12 +29,12 @@ export const LoginScreen = () => {
                 <div className="background-box">
                     <div className="login-box">
                         <div className="form-group">
-                            <label>Username: </label>
+                            <label>E-mail: </label>
                             <br/>
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                placeholder="Nombre de Usuario" 
+                                placeholder="E-mail" 
                                 name="username" 
                                 value={ username }
                                 onChange={ handleInputChange }
