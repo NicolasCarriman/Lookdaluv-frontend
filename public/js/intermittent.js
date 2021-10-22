@@ -1,58 +1,84 @@
-
 var neonActive = document.getElementById('btnneona');
 var neonActiveb = document.getElementById('btnneonb'); 
 var mainBox = document.getElementsByClassName('main__box');
 
-neonActive.style.borderColor = '#646464'
-neonActiveb.style.opacity = '0.1';
-neonActive.style.color = '#646464';
-neonActive.style.textShadow = '0 0 0px #000000, 0 0 0px #000000, 0 0 0px'
-neonActive.style.boxShadow = '0 0 0px 0px white inset'
-mainBox[0].style.background = 'radial-gradient(rgba( 0, 0, 0, 0), rgba(0, 15, 255, 0)) padding-box';
-mainBox[0].style.boxShadow = '0 0 0px rgba( 0, 0, 0, 0), 0 0 0px rgba( 0, 0, 0, 0), 0 0 0px'
+
+for (element of mainBox){
+	element.childNodes[1].style.opacity = '0.1';
+	element.childNodes[0].style.color = '#646464';
+	element.childNodes[0].style.borderColor = '#646464'
+	element.childNodes[0].style.textShadow = '0 0 0px #000000, 0 0 0px #000000, 0 0 0px'
+	element.childNodes[0].style.boxShadow = '0 0 0px 0px white inset'
+	element.style.background = 'radial-gradient(rgba( 0, 0, 0, 0), rgba(0, 15, 255, 0)) padding-box';
+	element.style.boxShadow = '0 0 0px rgba( 0, 0, 0, 0), 0 0 0px rgba( 0, 0, 0, 0), 0 0 0px'
+}
 
 const sleep = (time) => {
 	return new Promise((resolve) => setTimeout(resolve, time))
 }
 
-async function intermittent () {
+async function intermittent (element) {
 	for (let i = 0; i < 5; i++) {
-		if (neonActiveb.style.opacity == '0.1'){
-			/*asignacion*/
-			neonActiveb.style.opacity = '1';
-			neonActive.style.color = '#fff';
-            neonActive.style.borderColor = '#fff'
-            neonActive.style.textShadow = '0 0 10px #FF0000, 0 0 40px #FF0000, 0 0 80px'
-            neonActive.style.boxShadow = '0 0 5px 1px white inset'
-            mainBox[0].style.background = 'radial-gradient(rgba( 0, 0, 0, 0), rgba(0, 15, 255, 0.7)) padding-box';
-            mainBox[0].style.boxShadow = '0 0 15px #0000FF, 0 0 40px #0000FF, 0 0 80px'
+		if (element.firstChild.childNodes[1].style.opacity == '0.1'){
+
+			element.firstChild.childNodes[1].style.opacity = '1';
+			element.firstChild.childNodes[0].style.color = '#fff';
+            element.firstChild.childNodes[0].style.borderColor = '#fff'
+            element.firstChild.childNodes[0].style.textShadow = '0 0 0.5vw #FF0000, 0 0 2vw #FF0000, 0 0 4vw'
+            element.firstChild.childNodes[0].style.boxShadow = '0 0 0.2vw 0.05vw white inset'
+			element.firstChild.style.background = 'radial-gradient(rgba( 0, 0, 0, 0), rgba(0, 15, 255, 0.7)) padding-box';
+			element.firstChild.style.boxShadow = '0 0 2.5vw #0000FF, 0 0 6vw #0000FF, 0 0 12vw'
+
 		} 
 		else  {
-			neonActiveb.style.opacity = '0.1';
-			neonActive.style.color = '#646464';
-            neonActive.style.borderColor = '#646464'
-            neonActive.style.textShadow = '0 0 0px #000000, 0 0 0px #000000, 0 0 0px'
-            neonActive.style.boxShadow = '0 0 0px 0px white inset'
-            mainBox[0].style.background = 'radial-gradient(rgba( 0, 0, 0, 0), rgba(0, 15, 255, 0)) padding-box';
-            mainBox[0].style.boxShadow = '0 0 0px rgba( 0, 0, 0, 0), 0 0 0px rgba( 0, 0, 0, 0), 0 0 0px'
+			element.firstChild.childNodes[1].style.opacity = '0.1';
+			element.firstChild.childNodes[0].style.color = '#646464';
+            element.firstChild.childNodes[0].style.borderColor = '#646464'
+            element.firstChild.childNodes[0].style.textShadow = '0 0 0px #000000, 0 0 0px #000000, 0 0 0px'
+            element.firstChild.childNodes[0].style.boxShadow = '0 0 0px 0px white inset'
+            element.firstChild.style.background = 'radial-gradient(rgba( 0, 0, 0, 0), rgba(0, 15, 255, 0)) padding-box';
+            element.firstChild.style.boxShadow = '0 0 0px rgba( 0, 0, 0, 0), 0 0 0px rgba( 0, 0, 0, 0), 0 0 0px'
 		}
-		console.log('i')
-		await sleep(80)
+		await sleep(80);
 	}
 
 }	
 
-neonActiveb.addEventListener('mouseenter', () => {
-	intermittent();
-	setTimeout(function() {}, 480);
+document.getElementById('button-box-forgotpass').addEventListener('mouseenter', function(element) {
+	turnOn(element, 'button-box-forgotpass');
 });
 
-neonActiveb.addEventListener('mouseout', () => {
-	neonActiveb.style.opacity = '0.1';
-    neonActive.style.color = '#646464';
-    neonActive.style.borderColor = '#646464'
-    neonActive.style.textShadow = '0 0 0px #000000, 0 0 0px #000000, 0 0 0px'
-    neonActive.style.boxShadow = '0 0 0px 0px white inset'
-    mainBox[0].style.background = 'radial-gradient(rgba( 0, 0, 0, 0), rgba(0, 15, 255, 0)) padding-box';
-    mainBox[0].style.boxShadow = '0 0 0px rgba( 0, 0, 0, 0), 0 0 0px rgba( 0, 0, 0, 0), 0 0 0px'
+document.getElementById('button-box-login').addEventListener('mouseenter', function(element) {
+	turnOn(element, 'button-box-login');
 });
+
+document.getElementById('button-box-login').addEventListener('mouseout', function(element) {
+	turnOff(element);
+});
+
+document.getElementById('button-box-forgotpass').addEventListener('mouseout', function(element) {
+	turnOff(element);
+});
+
+
+function turnOn(element, box) {
+	if (element.target.id == box){
+		intermittent(element.target);
+		setTimeout(480);
+	}
+}
+
+
+function turnOff(element) {
+	if (element.target.id == 'btnneona' || element.target.id == 'btnneonb'){
+		for (element of mainBox){
+			element.childNodes[1].style.opacity = '0.1';
+			element.childNodes[0].style.color = '#646464';
+			element.childNodes[0].style.borderColor = '#646464'
+			element.childNodes[0].style.textShadow = '0 0 0px #000000, 0 0 0px #000000, 0 0 0px'
+			element.childNodes[0].style.boxShadow = '0 0 0px 0px white inset'
+			element.style.background = 'radial-gradient(rgba( 0, 0, 0, 0), rgba(0, 15, 255, 0)) padding-box';
+			element.style.boxShadow = '0 0 0px rgba( 0, 0, 0, 0), 0 0 0px rgba( 0, 0, 0, 0), 0 0 0px'
+		}
+	}
+}

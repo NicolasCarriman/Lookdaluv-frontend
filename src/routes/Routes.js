@@ -10,7 +10,6 @@ function Routes() {
             <Switch>
                 <Route exact path="/login/" component={LoginScreenWrapper}/>
                 <Route exact path="/home/" component={HomeScreen}/>
-                <Route exact path="/button/" component={ButtonScreen}/>
             </Switch>
         </BrowserRouter>
     );

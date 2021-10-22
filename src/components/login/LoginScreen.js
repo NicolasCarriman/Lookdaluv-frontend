@@ -1,8 +1,8 @@
-  
-import React from 'react'
+  import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useForm } from '../../hooks/useForm';
 import { startLogin } from '../../actions/auth';
+import Button from '../layout/Button';
 
 import '../../css/login.css';
 
@@ -29,7 +29,6 @@ export const LoginScreen = () => {
                 <div className="login-box-align">
                     <form onSubmit={ handleLogin }>
                         <div className="form-group">
-                            <label>E-mail: </label>
                             <br/>
                             <input 
                                 type="text" 
@@ -40,7 +39,6 @@ export const LoginScreen = () => {
                                 onChange={ handleInputChange }
                             />
                             <br/>
-                            <label>Password: </label>
                             <input 
                                 type="password" 
                                 className="form-control" 
@@ -50,11 +48,15 @@ export const LoginScreen = () => {
                                 onChange={ handleInputChange }
                             />
                             <br/>
-                            <button type="submit">Log In</button>
+                            <div id='button-box-login'>
+                                <Button type="submit" value="Login"></Button>
+                            </div>
+                            <div id='button-box-forgotpass'>
+                                <Button type="submit" value="Recovery"></Button>
+                            </div>
                         </div>
                     </form>
                 </div>
-                <button type="submit">Password reset</button>
             </div>
         </>
     );

@@ -1,3 +1,9 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: 'Noto Sans JP';
+}
+
 .login-box {
     position: absolute;
     left: 50%;
@@ -7,9 +13,20 @@
     padding: 40px;
     height: 28%;
     width: 15%;
-    background-color: rgb(255, 255, 255);
 }
 
 .login-box-align {
     text-align: center;
+}
+
+#button-box-forgotpass {
+    position: absolute;
+    top:20vh;
+    left:3vw;
+}
+
+#button-box-login {
+    position: absolute;
+    top:0vh;
+    left:8vw;
 }

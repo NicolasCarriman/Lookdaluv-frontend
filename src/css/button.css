@@ -1,19 +1,14 @@
-* {
-    background-color: black;
-    font-family: 'Noto Sans JP';
-}
-
 .main__box {
-    margin-top: 20px;
-    margin-left: 20px;
-    position: relative;
+    position: absolute;
+    top:0vh;
+    left:0vw;
     display: inline-block;
     z-index: 10;
-    border-top-left-radius:     15px ;
-    border-top-right-radius:    30px ;
-    border-bottom-right-radius: 16px ;
-    border-bottom-left-radius:  30px ;
-    box-shadow: 0 0 15px #0000FF, 0 0 40px #0000FF, 0 0 80px;
+    border-top-left-radius:     5vw ;
+    border-top-right-radius:    8vw ;
+    border-bottom-right-radius: 5vw ;
+    border-bottom-left-radius:  8vw ;
+    box-shadow: 0 0 2.5vw #0000FF, 0 0 6vw #0000FF, 0 0 12vw;
     background: radial-gradient(rgba( 0, 0, 0, 0), rgba(0, 15, 255, 0.7)) padding-box;
 }
 
@@ -24,16 +19,12 @@
     z-index: 30;
     border-color: #4B4B4B all;
     border-style: solid;
-    border-width: 1px;
-    box-shadow: 0 0 5px 1px white inset;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    border-top-left-radius:     15px ;
-    border-top-right-radius:    30px ;
-    border-bottom-right-radius: 16px ;
-    border-bottom-left-radius:  30px ;
+    border-width: 0.05vw;
+    box-shadow: 0 0 0.2vw 0.05vw white inset;
+    border-top-left-radius:     5vw ;
+    border-top-right-radius:    8vw ;
+    border-bottom-right-radius: 5vw ;
+    border-bottom-left-radius:  8vw ;
     opacity: 1;
 }
 
@@ -41,14 +32,12 @@
     position: absolute;
     z-index: 40;
     border: 0px solid transparent;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    border-top-left-radius:     15px ;
-    border-top-right-radius:    30px ;
-    border-bottom-right-radius: 16px ;
-    border-bottom-left-radius:  30px ;
+    top:0vh;
+    left:0vw;
+    border-top-left-radius:     5vw ;
+    border-top-right-radius:    8vw ;
+    border-bottom-right-radius: 5vw ;
+    border-bottom-left-radius:  8vw ;
     background:
     linear-gradient(to right, #9CACFF, #F2F2FF, #E3DBFF) border-box;
     -webkit-mask:  linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1)) padding-box,
@@ -59,15 +48,11 @@
   
 #btnneona {
     position: relative;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
     z-index: 35;
     color: #646464;
-    padding: 15px 30px;
-    letter-spacing: 4px;
-    font-size: 40px;
+    padding: 0.25vw 0.75vw;
+    letter-spacing: 0.25vw;
+    font-size: 1.25vw;
     text-align: center;
     text-decoration: none;
     overflow: hidden;
@@ -76,16 +61,12 @@
 
 #btnneonb {
     position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
     z-index: 45;
     border: 0px solid transparent;
     color: #fff;
-    padding: 15px 30px;
-    letter-spacing: 4px;
-    font-size: 40px;
+    padding: 0.25vw 0.75vw;
+    letter-spacing: 0.25vw;
+    font-size: 1.25vw;
     text-align: center;
     text-decoration: none;
 }
