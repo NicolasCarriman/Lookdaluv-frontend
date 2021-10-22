@@ -36,6 +36,14 @@ function HomeScreen() {
         completed: false,
         rarity: "GREEN",
         card_module: "Personal Growth"
+      },
+      {
+        id: 1,
+        title: "Kaizen",
+        description: "Pero ¿en qué consiste la estrategia Kaizen de mejora constante? «¡Hoy mejor que ayer, mañana mejor que hoy!» es el lema de este principio milenario. En otras palabras: las cosas siempre se pueden—y deben— hacer mejor. Por tanto, ni un solo día debería pasar sin llevar a cabo una cierta mejora.",
+        completed: false,
+        rarity: "GREEN",
+        card_module: "Personal Growth"
       }
     ]
 

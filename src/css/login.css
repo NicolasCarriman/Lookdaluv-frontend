@@ -1,15 +1,15 @@
-.background-box {
+.login-box {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border: 3px solid blue;
     padding: 40px;
-    height: 25%;
+    height: 28%;
     width: 15%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
-.login-box {
+.login-box-align {
     text-align: center;
 }

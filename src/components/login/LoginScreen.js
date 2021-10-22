@@ -25,9 +25,9 @@ export const LoginScreen = () => {
 
     return (
         <>
-            <form onSubmit={ handleLogin }>
-                <div className="background-box">
-                    <div className="login-box">
+            <div className="login-box">
+                <div className="login-box-align">
+                    <form onSubmit={ handleLogin }>
                         <div className="form-group">
                             <label>E-mail: </label>
                             <br/>
@@ -52,9 +52,10 @@ export const LoginScreen = () => {
                             <br/>
                             <button type="submit">Log In</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </form>
+                <button type="submit">Password reset</button>
+            </div>
         </>
     );
 }
