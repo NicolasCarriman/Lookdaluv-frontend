@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import LoginScreenWrapper from '../components/login/LoginScreen';
 import HomeScreen from '../components/home/HomeScreen'
-import ButtonScreen from '../components/button/ButtonScreen'
 
 function Routes() {
     return (

@@ -1,32 +1,199 @@
-* {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
     background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 18vh;
+    position: relative;
+}
+
+.caja__trasera{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(to left, rgb(43, 45, 71) 0%, rgba(51, 190, 255, 0) 50%, rgb(51, 190, 255, 0) 100%);
+    border-radius: 2vh 1.1vw;
+}
+
+.caja__trasera div{
+    margin: 100px 40px;
     color: white;
-    font-family: 'Noto Sans JP';
+    transition: all 500ms;
 }
 
-.login-box {
+.caja__trasera div p,
+.caja__trasera button{
+    margin-top: 30px;
+}
+
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera div p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.caja__trasera button{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover{
+    background: #fff;
+    color: #000000;
+}
+
+/*formularios*/
+
+.contenedor__login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms  cubic-bezier(o.175, 0885, 0320, 1.275);
+}
+
+.contenedor__login-register form{
+    width: 100%;
+    padding: 40px 20px;
+    padding-bottom: 100px;
+    background: linear-gradient(to top, rgb(11, 15, 43) 30%, rgb(30, 32, 49) 70%, rgba(33, 34, 66, 0.342) 100%);
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: 3px solid blue;
-    padding: 40px;
-    height: 28%;
-    width: 15%;
+    border-radius: 20px;
 }
 
-.login-box-align {
+.contenedor__login-register form h2{
+    font-size: 30px;
     text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 2.5vw #0000FF, 0 0 6vw #0000FF, 0 0 12vw;
+}
+
+.contenedor__login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: rgb(223, 222, 255);
+    color: white;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor__login-register form buttom{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #000000;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+
+.formulario__login{
+    opacity: 1;
+    display: block;
+    height: 62vh;
+}
+
+.formulario__register{
+    display: none;
+}
+
+/*Trabajando en el Responsive Desing*/
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+
+    }
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+    
+
+    /*formularios*/
+
+    .contenedor__login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor__login-register form{
+        position: relative;
+    }
 }
 
 #button-box-forgotpass {
+    display: inline-block;
     position: absolute;
-    top:20vh;
-    left:3vw;
+    top: 54vh;
+    left: 5.45vw;
 }
 
 #button-box-login {
+    display: inline-block;
     position: absolute;
-    top:0vh;
-    left:8vw;
+    top: 54vh;
+    left: 6.65vw;
 }

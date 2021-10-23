@@ -1,7 +1,4 @@
-var neonActive = document.getElementById('btnneona');
-var neonActiveb = document.getElementById('btnneonb'); 
 var mainBox = document.getElementsByClassName('main__box');
-
 
 for (element of mainBox){
 	element.childNodes[1].style.opacity = '0.1';
