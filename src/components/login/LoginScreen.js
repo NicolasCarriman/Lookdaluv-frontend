@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useForm } from '../../hooks/useForm';
 import { startLogin } from '../../actions/auth';
+import { registerUser } from '../../actions/register';
 import Button from '../layout/Button';
 
 import '../../css/button.css';
@@ -13,18 +14,21 @@ export const LoginScreen = () => {
     const dispatch = useDispatch();
 
     const [ formValues, handleInputChange ] = useForm({
+        email: '',
         username: '',
         password: ''
     });    
 
-    const { username, password } = formValues;
+    const {email, username, password} = formValues;
 
     const handleLogin = (e) =>{
         e.preventDefault();
-        dispatch( startLogin( username , password ) );
+        dispatch(startLogin(username , password));
     };
-
-
+    const handleRegister = (e) =>{
+        e.preventDefault();
+        dispatch(registerUser(email, username , password));
+    };
     return (
         <div className="contenedor__todo">
             <div className="caja__trasera">
@@ -47,7 +51,7 @@ export const LoginScreen = () => {
                         type="text" 
                         className="form-control input-text" 
                         placeholder="E-mail" 
-                        name="username" 
+                        name="username"
                         value={ username }
                         onChange={ handleInputChange }
                     />
@@ -64,13 +68,33 @@ export const LoginScreen = () => {
                     </div>
                 </form>
 
-                <form action="" className="formulario__register">
+                <form onSubmit={ handleRegister } className="formulario__register">
                     <h2>Regístrarse</h2>
-                    <input type="text" placeholder="Nombre completo"/>
-                    <input type="text" placeholder="Correo Electronico"/>
-                    <input type="text" placeholder="Usuario"/>
-                    <input type="password" placeholder="Contraseña"/>
-                    <div id='button-box-forgotpass'>
+                    <input 
+                        type="text" 
+                        className="form-control input-text" 
+                        placeholder="Correo Electronico"
+                        name="email"
+                        value={email}
+                        onChange={handleInputChange}
+                    />
+                    <input 
+                        type="text" 
+                        className="form-control input-text" 
+                        placeholder="Nombre de usuario" 
+                        name="username"
+                        value={ username }
+                        onChange={ handleInputChange }
+                    />
+                    <input 
+                        type="password" 
+                        className="form-control input-text" 
+                        placeholder="Contraseña"
+                        name="password"
+                        value={ password } 
+                        onChange={ handleInputChange }
+                    />
+                    <div id='button-box-register'>
                         <Button type="submit" value="Register"></Button>
                     </div>
                 </form>

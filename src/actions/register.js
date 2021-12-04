@@ -1,12 +1,11 @@
-import React, {component} from 'react';
-import { fetchWithoutToken, fetchWithToken } from "../helpers/fetch";
+import { fetchWithoutToken } from "../helpers/fetch";
+import { types } from "../types/types";
 
-export const registerUser = (username, password) => {
-
+export const registerUser = (email, username, password) => {
     return async( dispatch ) => {
         const response = await fetchWithoutToken(
-                                'login/',
-                                { username, password },
+                                'register/',
+                                { email, username, password },
                                 'POST',
                             );
         const body = await response.json();
@@ -18,19 +17,23 @@ export const registerUser = (username, password) => {
 
             // set user info
             localStorage.setItem('token', body.token);
-            localStorage.setItem('username', body.user.username);
-            localStorage.setItem('email', body.user.email);
-            localStorage.setItem('name', body.user.name);
-            localStorage.setItem('last_name', body.user.last_name);
+            localStorage.setItem('username', body.username);
+            localStorage.setItem('email', body.email);
+            localStorage.setItem('name', body.name);
 
-            dispatch( login({
+            dispatch( register({
                 token: body.token,
-                username: body.user.username
+                username: body.username
             }));
 
-            console.log("Success login");
+            console.log("Success register");
         }else{
             console.log(body.error);
         }
     }
 }
+
+const register = ( user ) => ({
+    type: types.register,
+    payload: user
+})
