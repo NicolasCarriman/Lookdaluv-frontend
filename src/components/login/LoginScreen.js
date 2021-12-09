@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useForm } from '../../hooks/useForm';
-import { startLogin } from '../../actions/auth';
+import { startChecking, startLogin, checkToken } from '../../actions/auth';
 import { registerUser } from '../../actions/register';
 import Button from '../layout/Button';
 
@@ -19,12 +19,6 @@ export const LoginScreen = (props) => {
     importScript("../../actions/intermitent.js");
     importScript("../login-component-animations.js");
 
-    const handleClick = () => {
-        props.ShowBar(true);
-        props.ShowBarLinks(true);
-        props.ShowLogin(false);
-    };
-
     const dispatch = useDispatch();
 
     const [ formValues, handleInputChange ] = useForm({
@@ -36,22 +30,22 @@ export const LoginScreen = (props) => {
     const {email, username, password} = formValues;
 
     const handleLogin = (e) =>{
-        e.preventDefault();
-        dispatch(startLogin(username , password));
-        var counter = 0;
-        // Mejorar el sistema de espera con un spinner.
-        while(counter < 1000){
-            console.log(localStorage.getItem("token"))
-            if (localStorage.getItem("token") != null){
-                // COMPROBAR QUE EL TOKEN SEA VALIDO CON EL SERVIDOR
-                // if token is valid...
-                successLogin(props);
-                break;
-            }
-            counter++;
-        }
+        e.preventDefault()
 
+        props.ShowLogin(false);
+
+        dispatch(startLogin(username, password)).then((response)=>{
+            // Mejorar el sistema de espera con un spinner.
+            
+            console.log(response)
+            if (response === 200 || response === 201){
+                successLogin(props);
+            } else {
+                props.ShowLogin(true);
+            };
+        });
     };
+
     const handleRegister = (e) =>{
         e.preventDefault();
         dispatch(registerUser(email, username , password));
@@ -93,7 +87,7 @@ export const LoginScreen = (props) => {
                             onChange={ handleInputChange }
                         />
                         <div id='button-box-login'>
-                            <Button onClick={handleClick} type="submit" value="Login"></Button>
+                            <Button type="submit" value="Login"></Button>
                         </div>
                     </form>
 
@@ -124,7 +118,7 @@ export const LoginScreen = (props) => {
                             onChange={ handleInputChange }
                         />
                         <div id='button-box-register'>
-                            <Button onClick={handleClick} type="submit" value="Register"></Button>
+                            <Button type="submit" value="Register"></Button>
                         </div>
                     </form>
                 </div>
@@ -136,7 +130,6 @@ export const LoginScreen = (props) => {
 export default LoginScreen;
 
 function successLogin (props){
-    console.log("[*] Success Login");
     props.ShowBar(true);
     props.ShowBarLinks(true);
     props.ShowLogin(false);

@@ -11,7 +11,7 @@ export default function MenuBar (props) {
 
     const handleClickProfile = () => {
         props.ShowBar(false);
-        props.ShowLogin(true);
+        props.ShowProfile(true);
     };
 
     return (

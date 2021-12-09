@@ -28,7 +28,7 @@ export const startLogin = (username, password) => {
                 username: body.user.username
             }));
 
-            console.log("Success login");
+            return response.status
         }else{
             console.log(body.error);
         }
