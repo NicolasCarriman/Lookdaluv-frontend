@@ -14,7 +14,7 @@ const sleep = (time) => {
 	return new Promise((resolve) => setTimeout(resolve, time))
 }
 
-async function intermittent (element) {
+async function intermitent (element) {
 	for (let i = 0; i < 5; i++) {
 		if (element.firstChild.childNodes[1].style.opacity == '0.1'){
 
@@ -41,8 +41,8 @@ async function intermittent (element) {
 
 }	
 
-document.getElementById('button-box-forgotpass').addEventListener('mouseenter', function(element) {
-	turnOn(element, 'button-box-forgotpass');
+document.getElementById('button-box-register').addEventListener('mouseenter', function(element) {
+	turnOn(element, 'button-box-register');
 });
 
 document.getElementById('button-box-login').addEventListener('mouseenter', function(element) {
@@ -53,14 +53,14 @@ document.getElementById('button-box-login').addEventListener('mouseout', functio
 	turnOff(element);
 });
 
-document.getElementById('button-box-forgotpass').addEventListener('mouseout', function(element) {
+document.getElementById('button-box-register').addEventListener('mouseout', function(element) {
 	turnOff(element);
 });
 
 
 function turnOn(element, box) {
 	if (element.target.id == box){
-		intermittent(element.target);
+		intermitent(element.target);
 		setTimeout(480);
 	}
 }

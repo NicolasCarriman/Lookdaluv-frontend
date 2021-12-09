@@ -1,0 +1,13 @@
+.line {
+    position: absolute;
+    width: 190px;
+    height: 2px;
+    top: 1300px;
+    left: 150px;
+    margin-left: 50px;
+    background-color: blue;
+}
+
+.point {
+    
+}

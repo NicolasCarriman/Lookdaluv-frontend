@@ -36,7 +36,7 @@ main{
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background: linear-gradient(to left, rgb(43, 45, 71) 0%, rgba(51, 190, 255, 0) 50%, rgb(51, 190, 255, 0) 100%);
+    background: linear-gradient(to left, rgb(14, 14, 14) 1%,rgb(7, 7, 7) 15%, rgb(0, 0, 0) 65%, black 100%);
     border-radius: 2vh 1.1vw;
 }
 
@@ -101,7 +101,7 @@ main{
     width: 100%;
     padding: 110px 20px;
     padding-bottom: 110px;
-    background: linear-gradient(to top, rgb(11, 15, 43) 30%, rgb(30, 32, 49) 70%, rgba(33, 34, 66, 0.342) 100%);
+    background: linear-gradient(to top, rgb(12, 12, 12) 30%, rgb(31, 31, 31) 70%, rgba(14, 14, 14, 0.342) 100%);
     position: absolute;
     border-radius: 20px;
 }
