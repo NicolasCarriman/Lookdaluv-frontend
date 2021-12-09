@@ -1,25 +1,25 @@
 window.addEventListener('wheel', scroll);
 
-var texto_1 = document.getElementById("text_1");
-var texto_2 = document.getElementById("text_2");
-var texto_3 = document.getElementById("text_3");
-var texto_4 = document.getElementById("text_4");
-var texto_5 = document.getElementById("text_5");
-var texto_6 = document.getElementById("text_6");
+let text_1 = document.getElementById("text_1");
+let text_2 = document.getElementById("text_2");
+let text_3 = document.getElementById("text_3");
+let text_4 = document.getElementById("text_4");
+let text_5 = document.getElementById("text_5");
+let text_6 = document.getElementById("text_6");
 
-var title = document.getElementById("title-id");
+let title = document.getElementById("title-id");
 
-var logo = document.getElementById("logo");
+let logo = document.getElementById("logo");
 
 $(title).css({'top': 350});
 
 let elements = [
-    [texto_1, logo],
-    [texto_2, logo],
-    [texto_3, logo],
-    [texto_4, logo],
-    [texto_5, logo],
-    [texto_6, logo],
+    [text_1, logo],
+    [text_2, logo],
+    [text_3, logo],
+    [text_4, logo],
+    [text_5, logo],
+    [text_6, logo],
 ];
 
 for (let group of elements){
@@ -28,9 +28,9 @@ for (let group of elements){
     } 
 };
 
-var position = 0;
+let position = 0;
 let transition_delay = 1000;
-var scrollDisabled = false;
+let scroll_disabled = false;
 let counter = 0;
 
 function scroll (e){
@@ -42,21 +42,20 @@ function scroll (e){
         counter = counter + 1;
     }
 
-    if (scrollDisabled){
+    if (scroll_disabled){
         return;
     }
 
     if (position == 0 || position == -1){
         scrollFirstStep(e);
     } else if (position == elements.length){
-        console.log("enter")
         scrollLastStep(e);
     } else {
         scrollStep(e);
     }
 
-    scrollDisabled = true
-    setTimeout(function(){scrollDisabled = false;}, 800);
+    scroll_disabled = true
+    setTimeout(function(){scroll_disabled = false;}, 800);
 }
 
 function scrollFirstStep (e){
@@ -145,12 +144,10 @@ function scrollStep(e){
 
         position = position - 1;
     }
-    console.log("final: " + position)
 }
 
 function scrollLastStep(e){
     if (Math.sign(e.deltaY) == 1){
-        console.log("here")
         for (let content in elements[elements.length-1]){
             $(elements[position-1][content]).animate({
                 'opacity': 0,

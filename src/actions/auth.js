@@ -12,8 +12,6 @@ export const startLogin = (username, password) => {
                             );
         const body = await response.json();
 
-        console.log(body);
-        console.log(response.status);
 
         if (response.status === 200 || response.status === 201){
 
@@ -30,8 +28,6 @@ export const startLogin = (username, password) => {
             }));
 
             return response.status
-        }else{
-            console.log(body.error);
         }
     }
 }

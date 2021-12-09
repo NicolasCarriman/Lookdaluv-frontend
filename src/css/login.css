@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,14 +14,14 @@ body{
     background-attachment: fixed;
 }
 
-main{
+main {
     width: 100%;
     padding: 20px;
     margin: auto;
     margin-top: 100px;
 }
 
-.contenedor__todo{
+.login-screen-box {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -29,7 +29,7 @@ main{
     position: relative;
 }
 
-.caja__trasera{
+.back-box {
     width: 100%;
     padding: 10px 20px;
     display: flex;
@@ -40,28 +40,28 @@ main{
     border-radius: 2vh 1.1vw;
 }
 
-.caja__trasera div{
+.back-box div {
     margin: 100px 40px;
     color: white;
     transition: all 500ms;
 }
 
-.caja__trasera div p,
-.caja__trasera button{
+.back-box div p,
+.back-box button {
     margin-top: 30px;
 }
 
-.caja__trasera div h3{
+.back-box div h3 {
     font-weight: 400;
     font-size: 26px;
 }
 
-.caja__trasera div p{
+.back-box div p {
     font-size: 16px;
     font-weight: 300;
 }
 
-.caja__trasera button{
+.back-box button {
     padding: 10px 40px;
     border: 2px solid #fff;
     font-size: 14px;
@@ -73,18 +73,16 @@ main{
     transition: all 300ms;
 }
 
-#btn__registrarse{
+#btn__register {
     margin-left: 100px;
 }
 
-.caja__trasera button:hover{
+.back-box button:hover {
     background: #fff;
     color: #000000;
 }
 
-/*formularios*/
-
-.contenedor__login-register{
+.login-screen-register {
     display: flex;
     align-items: center;
     width: 100%;
@@ -97,7 +95,7 @@ main{
     transition: left 500ms  cubic-bezier(o.175, 0885, 0320, 1.275);
 }
 
-.contenedor__login-register form{
+.login-screen-register form {
     width: 100%;
     padding: 110px 20px;
     padding-bottom: 110px;
@@ -106,7 +104,7 @@ main{
     border-radius: 20px;
 }
 
-.contenedor__login-register form h2{
+.login-screen-register form h2 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
@@ -114,7 +112,7 @@ main{
     text-shadow: 0 0 2.5vw #0000FF, 0 0 6vw #0000FF, 0 0 12vw;
 }
 
-.contenedor__login-register form input{
+.login-screen-register form input {
     width: 100%;
     margin-top: 20px;
     padding: 20px;
@@ -129,7 +127,7 @@ main{
     outline: none;
 }
 
-.contenedor__login-register form buttom{
+.login-screen-register form buttom {
     padding: 10px 40px;
     margin-top: 40px;
     border: none;
@@ -141,32 +139,32 @@ main{
     outline: none;
 }
 
-.formulario__login{
+.login-form {
     opacity: 1;
     display: block;
     height: 62vh;
 }
 
-.formulario__register{
+.register-form {
     display: none;
 }
 
 /*Trabajando en el Responsive Desing*/
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
 
-    main{
+    main {
         margin-top: 50px;
     }
 
-    .caja__trasera{
+    .back-box {
         max-width: 350px;
         height: 300px;
         flex-direction: column;
         margin: auto;
 
     }
-    .caja__trasera div{
+    .back-box div {
         margin: 0px;
         position: absolute;
     }
@@ -174,13 +172,13 @@ main{
 
     /*formularios*/
 
-    .contenedor__login-register{
+    .login-screen-register {
         top: -10px;
         left: -5px;
         margin: auto;
     }
 
-    .contenedor__login-register form{
+    .login-screen-register form {
         position: relative;
     }
 }

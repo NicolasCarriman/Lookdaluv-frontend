@@ -10,12 +10,8 @@ export const registerUser = (email, username, password) => {
                             );
         const body = await response.json();
 
-        console.log(body);
-        console.log(response.status);
-
         if (response.status === 200 || response.status === 201){
 
-            // set user info
             localStorage.setItem('token', body.token);
             localStorage.setItem('username', body.username);
             localStorage.setItem('email', body.email);
@@ -26,9 +22,6 @@ export const registerUser = (email, username, password) => {
                 username: body.username
             }));
 
-            console.log("Success register");
-        }else{
-            console.log(body.error);
         }
     }
 }

@@ -12,7 +12,7 @@
     text-align: center;
   }
 
-  .text-box {
+ .text-box {
     position: relative;
     display: flex;
     width: 450px;
@@ -23,17 +23,17 @@
     text-align: center;
   }
 
-  #text_1{
+  #text_1 {
     top: 68%;
     left: 39%;
   }
 
-  #text_2{
+  #text_2 {
     top: 30%;
     left: 60%;
   }
 
-  #text_3{
+  #text_3 {
     top: -6%;
     left: 38%;
   }
@@ -60,17 +60,6 @@
     transform: translate(-50%, -50%);
   }
 
-  .xd-img {
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-  }
-
   .img {
     position: absolute;
     left: 50%;
@@ -81,6 +70,6 @@
     border-radius: 50%;
   }
 
-  .form-style{
+  .form-style {
     color: white;
   }

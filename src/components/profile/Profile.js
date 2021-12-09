@@ -10,11 +10,11 @@ export default function Profile (props) {
         <>
             <div className="">
                 <div>
-                    <div className="container" id="contenedor">
+                    <div className="container">
                         <Bar title="Deconstructor"/>
-                        <Bar title="Chat Bot"/>
-                        <Bar title="Date simulation"/>
-                        <Bar title="Social Engineering"/>
+                        <Bar title="Simulador de entrevistas"/>
+                        <Bar title="Flujo de trabajo"/>
+                        <Bar title="Portfolio booster"/>
                     </div>
 
                 </div>

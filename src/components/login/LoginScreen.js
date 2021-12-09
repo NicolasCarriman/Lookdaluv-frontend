@@ -34,8 +34,7 @@ export const LoginScreen = (props) => {
         props.ShowLogin(false);
 
         dispatch(startLogin(username, password)).then((response)=>{
-            // Mejorar el sistema de espera con un spinner.
-            console.log(response)
+
             if (response === 200 || response === 201){
                 successLogin(props);
             } else {
@@ -51,22 +50,22 @@ export const LoginScreen = (props) => {
 
     return (
         <>
-            <div className="contenedor__todo">
-                <div className="caja__trasera">
-                    <div className="caja__trasera-login" id="back-login-box">
+            <div className="login-screen-box">
+                <div className="back-box">
+                    <div id="back-login-box">
                         <h3>¿Ya tienes una cuenta?</h3>
                         <p>Inicia sesión para entrar en la página</p>
-                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                        <button id="btn__start-session">Iniciar Sesión</button>
                     </div>
-                    <div className="caja__trasera-register" id="back-register-box">
+                    <div id="back-register-box">
                         <h3>¿Aún no tienes una cuenta?</h3>
                         <p>Regístrate para que puedas iniciar sesión</p>
-                        <button id="btn__registrarse">Regístrarse</button>
+                        <button id="btn__register">Regístrarse</button>
                     </div>
                 </div>
 
-                <div className="contenedor__login-register" id="containerId">
-                    <form onSubmit={ handleLogin } className="formulario__login">
+                <div className="login-screen-register" id="container-id">
+                    <form onSubmit={ handleLogin } className="login-form">
                         <h2>Iniciar Sesión</h2>
                         <input 
                             type="text" 
@@ -89,7 +88,7 @@ export const LoginScreen = (props) => {
                         </div>
                     </form>
 
-                    <form onSubmit={ handleRegister } className="formulario__register">
+                    <form onSubmit={ handleRegister } className="register-form">
                         <h2>Regístrarse</h2>
                         <input 
                             type="text" 
@@ -131,4 +130,5 @@ function successLogin (props){
     props.ShowBar(true);
     props.ShowBarLinks(true);
     props.ShowLogin(false);
+    props.ShowPlayerBox(true);
 };

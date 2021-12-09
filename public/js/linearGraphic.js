@@ -49,16 +49,14 @@ for (let semana of semanas){
             punto.style.top = `${(22 + altura_total ) - resta }vh`;
 
         } if (semanas[semana_num][0] - semanas[semana_num][1] > 0){
-            console.log(semanas[semana_num]);
+
             resta = Math.abs(semanas[semana_num][0] - semanas[semana_num][1]) ;     
             punto.style.top = `${21.8 + altura_total - resta }vh`; 
 
         } else if (semanas[semana_num][0] < semanas[semana_num][1] ){
             resta2 = Math.abs(semanas[semana_num][0] - semanas[semana_num][1]) ;
             punto.style.top = `${21.8 + altura_total + resta2  }vh`; 
-            console.log(altura_total + ' ' + 'saltura');
-            console.log(opuesto / 2 + ' ' + 'opuesto');
-            console.log(resta + ' ' + 'resta');
+
         } else {
             punto.style.top = `${21.8 + altura_total }vh`;
         }

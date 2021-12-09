@@ -1,7 +1,7 @@
 export default function Card (props){
 
     const handleClick = () => {
-        
+        // JS animation
     };
 
     return (

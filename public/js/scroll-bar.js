@@ -1,6 +1,7 @@
 
 var navbar = document.getElementsByClassName("scroll-bar");
-var navbardown = document.getElementsByClassName("menu-bar");
+var menubar = document.getElementById("modules-link");
+
 navbar[0].style.bottom = '86.6vh';
 
 const sleep = (time) => {
@@ -10,7 +11,6 @@ const sleep = (time) => {
 async function slide() {
 	
 	if ( navbar[0].style.bottom == '86.6vh' ) {
-		console.log("slide on");
 		navbar[0].animate({
 	    'bottom': 68 + 'vh',
 	    }, 450);
@@ -29,6 +29,6 @@ async function slideoff() {
     }
 }
 
-navbardown[0].addEventListener("mouseover", slide) ;
+menubar[0].addEventListener("mouseover", slide) ;
 navbar[0].addEventListener("mouseleave", slideoff) ;
 

@@ -1,8 +1,10 @@
 import React from 'react'
 
 
-export default function MenuBar (props) {
 
+import '../../css/menubar.css'
+
+export default function MenuBar (props) {
 
     const handleClickLogin = () => {
         props.ShowBar(false);
