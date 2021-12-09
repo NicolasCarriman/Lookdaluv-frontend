@@ -8,8 +8,7 @@ import Button from '../layout/Button';
 import '../../css/button.css';
 import '../../css/login.css';
 import '../../css/main_theme.css';
-import '../../css/home.css';
-import '../../css/menubar.css';
+
 
 import importScript from '../../actions/script-load.js';
 

@@ -1,9 +1,13 @@
 export default function Card (props){
-    
+
+    const handleClick = () => {
+        
+    };
+
     return (
-        <div class="card-item">
-            <a class="card-title">{props.title}</a>
-            <div class="card-description">
+        <div onClick={handleClick} className="card-item">
+            <a className="card-title">{props.title}</a>
+            <div className="card-description">
                 {props.description}
             </div>
         </div>
