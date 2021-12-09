@@ -36,7 +36,6 @@ export const LoginScreen = (props) => {
 
         dispatch(startLogin(username, password)).then((response)=>{
             // Mejorar el sistema de espera con un spinner.
-            
             console.log(response)
             if (response === 200 || response === 201){
                 successLogin(props);
