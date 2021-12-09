@@ -1,7 +1,7 @@
 export default function PlayerBox(props) {
     
     return (
-        <div class="player-box">
+        <div className="player-box">
             <nav>
                 {props.children}
             </nav>
