@@ -24,11 +24,8 @@ function IndexScreen() {
             
             console.log(response);
             if (response === 200 || response === 201){
-                console.log("logged in");
                 setShowBarLinks(true);
-            } else {
-                console.log("not loged in");
-            };
+            }
         });
     });
 
