@@ -28,6 +28,7 @@ export default function MenuBar (props) {
                 }
                 
                 <h1>lookdaluv.</h1>
+
                 {props.ShowBarLinks ?
                     <>
                         <input type="submit" value="SUPPORT" id="support-link" className="menu-bar-item"/>

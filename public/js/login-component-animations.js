@@ -32,10 +32,6 @@ function login (){
 
 var imageOffset = 0
 
-const sleep = (time) => {
-	return new Promise((resolve) => setTimeout(resolve, time))
-}
-
 async function scrolling(evt) {
 
     document.getElementById("containerId").animate({

@@ -6,8 +6,11 @@ import LoginScreen from '../login/LoginScreen';
 import Profile from '../profile/Profile';
 import '../../css/menubar.css'
 
+import importScript from '../../actions/script-load.js';
 
 function IndexScreen() {
+    importScript("../js/scroll-bar.js");
+
     const [showLogin, setShowLogin] = React.useState(false);
     const [showBarLinks, setShowBarLinks] = React.useState(false);
     const [showProfile, setShowProfile] = React.useState(false);
@@ -21,9 +24,10 @@ function IndexScreen() {
             
             console.log(response);
             if (response === 200 || response === 201){
+                console.log("logged in");
                 setShowBarLinks(true);
             } else {
-                console.log("not loged in")
+                console.log("not loged in");
             };
         });
     });
@@ -34,7 +38,7 @@ function IndexScreen() {
 
             {showMenuBar ?
                 <MenuBar 
-                    ShowLogin={(showLogin) => setShowLogin(showLogin)} 
+                    ShowLogin={(showLogin) => setShowLogin(showLogin)}
                     ShowBarLinks={(showBarLinks) => setShowBarLinks(showBarLinks)} ShowBarLinks={showBarLinks}
                     ShowProfile={(showProfile) => setShowProfile(showProfile)}
                     ShowBar={(showMenuBar) => setShowMenuBar(showMenuBar)}

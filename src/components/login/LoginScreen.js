@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useForm } from '../../hooks/useForm';
-import { startChecking, startLogin } from '../../actions/auth';
+import { startLogin } from '../../actions/auth';
 import { registerUser } from '../../actions/register';
 import Button from '../layout/Button';
 
@@ -16,8 +16,8 @@ import importScript from '../../actions/script-load.js';
 
 export const LoginScreen = (props) => {
 
-    importScript("../../actions/intermitent.js");
-    importScript("../login-component-animations.js");
+    importScript("../js/intermitent.js");
+    importScript("../js/login-component-animations.js");
 
     const dispatch = useDispatch();
 

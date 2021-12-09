@@ -10,10 +10,6 @@ for (element of mainBox){
 	element.style.boxShadow = '0 0 0px rgba( 0, 0, 0, 0), 0 0 0px rgba( 0, 0, 0, 0), 0 0 0px'
 }
 
-const sleep = (time) => {
-	return new Promise((resolve) => setTimeout(resolve, time))
-}
-
 async function intermitent (element) {
 	for (let i = 0; i < 5; i++) {
 		if (element.firstChild.childNodes[1].style.opacity == '0.1'){
