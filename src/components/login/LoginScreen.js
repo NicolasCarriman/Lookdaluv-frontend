@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useForm } from '../../hooks/useForm';
-import { startChecking, startLogin, checkToken } from '../../actions/auth';
+import { startChecking, startLogin } from '../../actions/auth';
 import { registerUser } from '../../actions/register';
 import Button from '../layout/Button';
 

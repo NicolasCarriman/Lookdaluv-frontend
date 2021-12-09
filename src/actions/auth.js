@@ -56,7 +56,7 @@ export const startChecking = () => {
                 token: body.token,
                 username: body.user.username
             }) );
-
+            return response.status;
         }else{
             dispatch( checkingFinish() );
         }
