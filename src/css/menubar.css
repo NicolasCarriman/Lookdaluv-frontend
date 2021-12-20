@@ -45,6 +45,43 @@
     color: rgb(60, 73, 255);
 }
 
+ .menu-bar .menu-bar-item2 {
+    position: absolute;
+    background-color: #f7080800;
+    border: none;
+    color: white;
+    padding: 18px 32px;
+    text-decoration: none;
+    top: 0px;
+
+    font-size: 12px;
+    cursor: pointer;
+    float: left;
+  }
+
+.menu-bar .menu-bar-item2:hover {
+    transition: all 700ms ease;
+    color: rgb(60, 73, 255);
+}
+ .menu-bar .menu-bar-item1 {
+    position: absolute;
+    background-color: #f7080800;
+    border: none;
+    color: white;
+    padding: 18px 32px;
+    text-decoration: none;
+    top: 0px;
+
+    font-size: 12px;
+    cursor: pointer;
+    float: left;
+  }
+
+.menu-bar .menu-bar-item1:hover {
+    transition: all 700ms ease;
+    color: rgb(60, 73, 255);
+}
+
 #profile-link {
     left: 30%;
 }

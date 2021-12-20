@@ -21,7 +21,7 @@ export default function MenuBar (props) {
                 {props.ShowBarLinks ?
                     <>
                         <input onClick={handleClickProfile} type="submit" value="PROFILE" id="profile-link" className="menu-bar-item"/>
-                        <input type="submit" value="MODULES" id="modules-link" className="menu-bar-item"/>
+                        <input type="submit" value="MODULES" id="modules-link" className="menu-bar-item1"/>
                     </>
                 :
                     <></>
@@ -32,7 +32,7 @@ export default function MenuBar (props) {
                 {props.ShowBarLinks ?
                     <>
                         <input type="submit" value="SUPPORT" id="support-link" className="menu-bar-item"/>
-                        <input type="submit" value="TOOLS" id="tools-link" className="menu-bar-item"/>
+                        <input type="submit" value="TOOLS" id="tools-link" className="menu-bar-item2"/>
                     </>
                 :
                     <></>

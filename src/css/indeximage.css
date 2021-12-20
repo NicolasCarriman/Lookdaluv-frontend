@@ -1,0 +1,43 @@
+.banner {
+	background-color: black;
+	width: 60vw;
+	height: 30vw;
+	border-style: solid;
+	border-color: white ;
+	position: absolute;
+	left: 65vh;
+	top: 22vh;
+}
+.banner-red,
+.banner-red1,
+.banner-red2,
+.banner-red3,
+.banner-red4,
+.banner-red5,
+.banner-red6
+{
+	position: absolute;
+	background-color: red;
+	width: 5vw;
+	height: 30vw;
+	left: -0.5vh;
+	top: -0.5vh;
+}
+.banner-red1{
+	left: 9vh;
+}
+.banner-red2{
+	left: 18vh;
+}
+.banner-red3{
+	left: 27vh;
+}
+.banner-red4{
+	left: 36vh;
+}
+.banner-red5{
+	left: 45vh;
+}
+.banner-red6{
+	left: 54vh;
+}

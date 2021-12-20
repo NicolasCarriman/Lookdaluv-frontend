@@ -15,20 +15,23 @@
 	background: linear-gradient(to bottom, #000000 55%, #222222 100%);
     color: white;
     height: 87%;
-    width: 100%;
+    width: 180vw;
     padding-left: 4%;
+    border-style: solid;
+    border-color: white;
 }
 
 
 .card-item {
+    position: relative;
     color: rgb(255, 255, 255, 0);
-    margin-top: 180px;
+    margin-top: 15vh;
     padding-top: 20px;
     margin-left: 20px;
     display: inline-block;
     background-color: rgb(20, 20, 20);
-    height: 400px;
-    width: 230px;
+    height: 25vw;
+    width: 14vw;
     text-align: center;
     opacity: 0.7;
     vertical-align: middle;
@@ -58,6 +61,10 @@
     border-image: linear-gradient(to left, rgb(0, 0, 0) 1%, rgb(60, 73, 255) 30%,rgb(255, 255, 255) 50%,rgb(60, 73, 255) 70%, rgba(0, 0, 0, 1) 100%) 
     100% 0 100% 0/3px 0 0px 0 stretch;
     border-image-slice: 1;
+}
+.card-item.active {
+    width: 25vw;
+    height: 60vw;
 }
 
 .card-title {

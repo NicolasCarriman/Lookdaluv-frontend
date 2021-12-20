@@ -5,6 +5,8 @@ import MenuBar from '../layout/MenuBar';
 import LoginScreen from '../login/LoginScreen';
 import Profile from '../profile/Profile';
 import '../../css/menubar.css'
+import '../../css/indeximage.css'
+
 
 import importScript from '../../actions/script-load.js';
 
@@ -12,7 +14,7 @@ function IndexScreen() {
     importScript("../js/scroll-bar.js");
 
     const [showLogin, setShowLogin] = React.useState(false);
-    const [showBarLinks, setShowBarLinks] = React.useState(false);
+    const [showBarLinks, setShowBarLinks] = React.useState(true);
     const [showProfile, setShowProfile] = React.useState(false);
     const [showMenuBar, setShowMenuBar] = React.useState(true);
 
@@ -61,7 +63,6 @@ function IndexScreen() {
             :
                 <></>
             }
-
         </div>
     );
 }
